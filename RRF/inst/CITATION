@@ -1,0 +1,39 @@
+citHeader("To cite RRF in publications use:")
+		
+ citEntry(entry="Article",
+         title = "Guided Random Forest in the RRF Package",
+         author = personList(person(last="Deng", first="Houtao")),
+	 journal = "arXiv:1306.0237",
+         year         = "2013",      		 
+         textVersion = 
+         paste("H. Deng(2013). ", 
+               "Guided Random Forest in the RRF Package. ",
+               "arXiv:1306.0237.",
+               sep=""))		
+			   
+ citEntry(entry="Article",
+         title = "Gene Selection with Guided Regularized Random Forest",
+         author = personList(person(last="Deng", first="Houtao"),
+	                     person(last="Runger", first="George")),
+	 journal = "Pattern Recognition",
+         year         = "2013",      
+         volume       = "46",
+         number       = "12",
+         pages        = "3483-3489",		 
+         textVersion = 
+         paste("H. Deng and G. Runger (2013). ", 
+               "Gene Selection with Guided Regularized Random Forest. ",
+               "Pattern Recognition 46(12): 3483-3489.",
+               sep=""))
+			   
+ citEntry(entry="Article",
+         title = "Feature Selection via Regularized Trees",
+         author = personList(person(last="Deng", first="Houtao"),
+	                     person(last="Runger", first="George")),
+	 journal = "The 2012 International Joint Conference on Neural Networks (IJCNN)",
+         year         = "2012",             
+         textVersion = 
+         paste("H. Deng and G. Runger (2012). ", 
+               "Feature Selection via Regularized Trees. ",
+               "The 2012 International Joint Conference on Neural Networks (IJCNN).",
+               sep=""))			   
