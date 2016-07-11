@@ -28,7 +28,7 @@ void regRF(double *x, double *y, int *xdim, int *sampsize,
            double *upper, double *mse, int *keepf, int *replace,
            int *testdat, double *xts, int *nts, double *yts, int *labelts,
            double *yTestPred, double *proxts, double *msets, double *coef,
-           int *nout, int *inbag) {
+           int *nout, int *inbag, double *coefReg, int *flagReg0, int *varUsedAll) {
     /*************************************************************************
    Input:
    mdim=number of variables in data set
@@ -59,6 +59,7 @@ void regRF(double *x, double *y, int *xdim, int *sampsize,
     int *oobpair, varImp, localImp, *varUsed;
 
     int *in, *nind, *nodex, *nodexts;
+int flagReg;//new
 
     nsample = xdim[0];
     mdim = xdim[1];
@@ -68,6 +69,7 @@ void regRF(double *x, double *y, int *xdim, int *sampsize,
     nPerm = imp[2];
     keepF = keepf[0];
     keepInbag = keepf[1];
+flagReg = *flagReg0;
 
     if (*jprint == 0) *jprint = *nTree + 1;
 
@@ -178,7 +180,7 @@ void regRF(double *x, double *y, int *xdim, int *sampsize,
 		regTree(xb, yb, mdim, *sampsize, lDaughter + idx, rDaughter + idx,
                 upper + idx, avnode + idx, nodestatus + idx, *nrnodes,
                 treeSize + j, *nthsize, *mtry, mbest + idx, cat, tgini,
-                varUsed);
+                varUsed, varUsedAll, coefReg, flagReg0);
         /* predict the OOB data with the current tree */
 		/* ytr is the prediction on OOB data by the current tree */
 		predictRegTree(x, nsample, mdim, lDaughter + idx,
