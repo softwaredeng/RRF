@@ -29,7 +29,9 @@ void regTree(double *x, double *y, int mdim, int nsample, int *lDaughter,
              int *rDaughter,
              double *upper, double *avnode, int *nodestatus, int nrnodes,
              int *treeSize, int nthsize, int mtry, int *mbest, int *cat,
-	     double *tgini, int *varUsed) {
+	     double *tgini, int *varUsed,
+	     int *varUsedAll, double *coefReg, int *flagReg //regularization vars
+	     ) {
     int i, j, k, m, ncur, *jdex, *nodestart, *nodepop;
     int ndstart, ndend, ndendl, nodecnt, jstat, msplit;
     double d, ss, av, decsplit, ubest, sumnode;
@@ -77,7 +79,9 @@ void regTree(double *x, double *y, int mdim, int nsample, int *lDaughter,
 		
 		findBestSplit(x, jdex, y, mdim, nsample, ndstart, ndend, &msplit,
                       &decsplit, &ubest, &ndendl, &jstat, mtry, sumnode,
-                      nodecnt, cat);
+                      nodecnt, cat,
+                      varUsedAll,coefReg,flagReg //new vars
+                      );
 		if (jstat == 1) {
 			/* Node is terminal: Mark it as such and move on to the next. */
 			nodestatus[k] = NODE_TERMINAL;
@@ -148,7 +152,9 @@ void regTree(double *x, double *y, int mdim, int nsample, int *lDaughter,
 void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 		   int ndstart, int ndend, int *msplit, double *decsplit,
 		   double *ubest, int *ndendl, int *jstat, int mtry,
-		   double sumnode, int nodecnt, int *cat) {
+		   double sumnode, int nodecnt, int *cat,
+		   double *coefReg, int *flagReg  //regularization vars
+		   ) {
     int last, ncat[32], icat[32], lc, nl, nr, npopl, npopr;
     int i, j, kv, l, *mind, *ncase;
     double *xt, *ut, *v, *yl, sumcat[32], avcat[32], tavcat[32], ubestt;
@@ -170,12 +176,14 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
     ubestt = 0.0;
     for (i=0; i < mdim; ++i) mind[i] = i;
 
+    /* start main loop through variables to find best split. */
     last = mdim - 1;
     for (i = 0; i < mtry; ++i) {
 		critvar = 0.0;
+		/* sample mtry variables w/o replacement. */
 		j = (int) (unif_rand() * (last+1));
 		kv = mind[j];
-        swapInt(mind[j], mind[last]);
+                swapInt(mind[j], mind[last]);
 		last--;
 		
 		lc = cat[kv];
@@ -187,7 +195,7 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 			}
 		} else {
 			/* categorical variable */
-            zeroInt(ncat, 32);
+                        zeroInt(ncat, 32);
 			zeroDouble(sumcat, 32);
 			for (j = ndstart; j <= ndend; ++j) {
 				l = (int) x[kv + (jdex[j] - 1) * mdim];
@@ -225,8 +233,9 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 			npopl++;
 			npopr--;
 			if (v[j] < v[j+1]) {
-				crit = (suml * suml / npopl) + (sumr * sumr / npopr) -
-					critParent;
+				crit = (suml * suml / npopl) + (sumr * sumr / npopr) - critParent;
+					//If regularization and not used, then regularize new		 
+					if((*flagReg)==1)crit = (*coefReg) * crit;
 				if (crit > critvar) {
 					ubestt = (v[j] + v[j+1]) / 2.0;
 					critvar = crit;
