@@ -43,7 +43,7 @@ void classForest(int *mdim, int *ntest, int *nclass, int *maxcat,
 void regTree(double *x, double *y, int mdim, int nsample, 
 	     int *lDaughter, int *rDaughter, double *upper, double *avnode, 
              int *nodestatus, int nrnodes, int *treeSize, int nthsize, 
-             int mtry, int *mbest, int *cat, double *tgini, int *varUsed);
+             int mtry, int *mbest, int *cat, double *tgini, int *varUsed, int *varUsedAll, double *coefReg, int *flagReg);
 
 void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample, 
 		   int ndstart, int ndend, int *msplit, double *decsplit, 
