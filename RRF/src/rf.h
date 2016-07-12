@@ -48,7 +48,7 @@ void regTree(double *x, double *y, int mdim, int nsample,
 void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample, 
 		   int ndstart, int ndend, int *msplit, double *decsplit, 
 		   double *ubest, int *ndendl, int *jstat, int mtry,
-		   double sumnode, int nodecnt, int *cat);
+		   double sumnode, int nodecnt, int *cat, int *varUsedAll, double *coefReg, int *flagReg);
 
 void predictRegTree(double *x, int nsample, int mdim, 
 		    int *lDaughter, int *rDaughter, int *nodestatus, 
