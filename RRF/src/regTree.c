@@ -153,7 +153,7 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 		   int ndstart, int ndend, int *msplit, double *decsplit,
 		   double *ubest, int *ndendl, int *jstat, int mtry,
 		   double sumnode, int nodecnt, int *cat,
-		   double *coefReg, int *flagReg  //regularization vars
+		   int *varUsedAll,double *coefReg, int *flagReg  //regularization vars
 		   ) {
     int last, ncat[32], icat[32], lc, nl, nr, npopl, npopr;
     int i, j, kv, l, *mind, *ncase;
