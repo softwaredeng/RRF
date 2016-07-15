@@ -47,6 +47,8 @@ void regRF(double *x, double *y, int *xdim, int *sampsize,
    mth variable as the percent rise in the test set mean sum-of-
    squared errors when the mth variable is randomly permuted.
 
+     *  coefReg: coefficient for the regularized gain
+     *  flagReg: 1=regularization; 0: without regularization
   *************************************************************************/
 
     double errts = 0.0, averrb, meanY, meanYts, varY, varYts, r, xrand,
