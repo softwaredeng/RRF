@@ -65,6 +65,7 @@ int flagReg;//new
 
     nsample = xdim[0];
     mdim = xdim[1];
+    zeroInt(varUsedAll, mdim);  //added
     ntest = *nts;
     varImp = imp[0];
     localImp = imp[1];
