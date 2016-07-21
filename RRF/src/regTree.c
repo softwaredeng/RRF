@@ -90,6 +90,7 @@ void regTree(double *x, double *y, int mdim, int nsample, int *lDaughter,
         /* Found the best split. */
         mbest[k] = msplit;
         varUsed[msplit - 1] = 1;
+        varUsedAll[msplit - 1] = 1;  //added
 		upper[k] = ubest;
 		tgini[msplit - 1] += decsplit;
 		nodestatus[k] = NODE_INTERIOR;
@@ -235,7 +236,7 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 			if (v[j] < v[j+1]) {
 				crit = (suml * suml / npopl) + (sumr * sumr / npopr) - critParent;
 					//If regularization and not used, then regularize new		 
-					f((*flagReg)==1 & (varUsedAll[kv])==0)  crit = (coefReg[kv]) * crit;
+					f((*flagReg)==1 & (varUsedAll[kv])==0)  crit = (coefReg[kv]) * crit;  //added
 				if (crit > critvar) {
 					ubestt = (v[j] + v[j+1]) / 2.0;
 					critvar = crit;
