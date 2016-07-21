@@ -235,7 +235,7 @@ void findBestSplit(double *x, int *jdex, double *y, int mdim, int nsample,
 			if (v[j] < v[j+1]) {
 				crit = (suml * suml / npopl) + (sumr * sumr / npopr) - critParent;
 					//If regularization and not used, then regularize new		 
-					if((*flagReg)==1)crit = (*coefReg) * crit;
+					f((*flagReg)==1 & (varUsedAll[kv])==0)  crit = (coefReg[kv]) * crit;
 				if (crit > critvar) {
 					ubestt = (v[j] + v[j+1]) / 2.0;
 					critvar = crit;
