@@ -388,8 +388,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                     dimnames = list(xts.row.names, c(xts.row.names,
                     x.row.names))) else NULL),
                     inbag = if (keep.inbag) rfout$inbag else NULL,
-					feaSet = which(rfout$varUsedAll>0))
-					#coefReg=rfout$coefReg,  # new
+					feaSet = which(rfout$varUsedAll>0)),
+					coefReg=rfout$coefReg  # new
 					#flagReg=rfout$flagReg,
 					#varUsedAll=rfout$varUsedAll,					
 					#varDebug=rfout$varDebug)
@@ -441,7 +441,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
 		    flagReg=as.integer(flagReg),
 		    varUsedAll=as.integer(varUsedAll),
                     DUP=FALSE,
-                    PACKAGE="RRF")[c(16:28, 36:41)]
+                    PACKAGE="RRF")[-1]
+                    ##[c(16:28, 36:41)]
         ## Format the forest component, if present.
         if (keep.forest) {
             max.nodes <- max(rfout$ndbigtree)
@@ -507,7 +508,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                     inbag = if (keep.inbag)
                     matrix(rfout$inbag, nrow(rfout$inbag),
                            dimnames=list(x.row.names, NULL)) else NULL,
-                           feaSet = which(rfout$varUsedAll>0))
+                           feaSet = which(rfout$varUsedAll>0),
+                            coefReg=rfout$coefReg)
     }
     class(out) <- "RRF"
     return(out)
