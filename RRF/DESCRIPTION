@@ -6,7 +6,7 @@ Depends: R (>= 2.5.0), stats
 Suggests: RColorBrewer, MASS
 Author: Fortran original by Leo Breiman and Adele Cutler, R port by
     Andy Liaw and Matthew Wiener, Regularized random forest by
-    Houtao Deng.
+    Houtao Deng, RRF for regression by Xin Guan. 
 Description: Feature Selection with Regularized Random Forest. This
     package is based on the 'randomForest' package by Andy Liaw.
     The key difference is the RRF function that builds a
