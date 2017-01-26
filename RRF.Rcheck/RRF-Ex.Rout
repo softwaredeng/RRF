@@ -3955,7 +3955,7 @@ mtry = 6 	OOB error = 25.23%
 > ###
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  1.497 0.064 1.565 0 0 
+Time elapsed:  1.47 0.085 1.56 0 0 
 > grDevices::dev.off()
 null device 
           1 
