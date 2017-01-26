@@ -1,0 +1,24 @@
+MDSplot                 Multi-dimensional Scaling Plot of Proximity
+                        matrix from RRF
+RRF                     Feature Selection with Regularized Random
+                        Forest
+classCenter             Prototypes of groups.
+combine                 Combine Ensembles of Trees
+getTree                 Extract a single tree from a forest.
+grow                    Add trees to an ensemble
+importance              Extract variable importance measure
+imports85               The Automobile Data
+margin                  Margins of RRF Classifier
+na.roughfix             Rough Imputation of Missing Values
+outlier                 Compute outlying measures
+partialPlot             Partial dependence plot
+plot.RRF                Plot method for RRF objects
+predict.RRF             predict method for random forest objects
+rrfImpute               Missing Value Imputations by RRF
+rrfNews                 Show the NEWS file
+rrfcv                   Random Forest Cross-Valdidation for feature
+                        selection
+treesize                Size of trees in an ensemble
+tuneRRF                 Tune RRF for the optimal mtry parameter
+varImpPlot              Variable Importance Plot
+varUsed                 Variables used in a random forest

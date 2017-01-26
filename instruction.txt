@@ -1,0 +1,5 @@
+R CMD build --binary RRF  #build windows
+
+R CMD build RRF  #this is the file for submiting to CRAN
+
+R CMD check --as-cran RRF_1.3.tar.gz  # this checks the build with cran criteria

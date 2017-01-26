@@ -1,7 +1,7 @@
 Package: RRF
 Title: Regularized Random Forest
 Version: 1.7
-Date: 2016-7-22
+Date: 2017-1-25
 Depends: R (>= 2.5.0), stats
 Suggests: RColorBrewer, MASS
 Author: Fortran original by Leo Breiman and Adele Cutler, R port by
@@ -12,12 +12,10 @@ Description: Feature Selection with Regularized Random Forest. This
     The key difference is the RRF function that builds a
     regularized random forest.
 Maintainer: Houtao Deng <softwaredeng@gmail.com>
-            Xin Guan <xguan8@asu.edu>
 License: GPL (>= 2)
 URL: https://sites.google.com/site/houtaodeng/rrf
 Repository: CRAN
 Date/Publication: 2013-10-20 00:34:19
-Packaged: 2016-07-22 20:56:45 UTC; xguan8
+Packaged: 2017-01-18 05:50:38 UTC; houtao
 NeedsCompilation: yes
 RoxygenNote: 5.0.1
-
