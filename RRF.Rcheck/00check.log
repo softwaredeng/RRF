@@ -1,15 +1,14 @@
-* using log directory ‘/Users/houtao/RRF/RRF.Rcheck’
-* using R version 3.2.3 (2015-12-10)
-* using platform: x86_64-apple-darwin13.4.0 (64-bit)
+* using log directory ‘/Users/houtaodeng/mine/RRF/RRF.Rcheck’
+* using R version 3.4.3 (2017-11-30)
+* using platform: x86_64-apple-darwin15.6.0 (64-bit)
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘RRF/DESCRIPTION’ ... OK
-* this is package ‘RRF’ version ‘1.7’
+* this is package ‘RRF’ version ‘1.8’
 * checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Houtao Deng <softwaredeng@gmail.com>’
 * checking package namespace information ... OK
-* checking package dependencies ... NOTE
-  No repository set, so cyclic dependency check skipped
+* checking package dependencies ... OK
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
 * checking for executable files ... OK
@@ -54,4 +53,4 @@ Maintainer: ‘Houtao Deng <softwaredeng@gmail.com>’
 * checking examples ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 NOTE
+Status: OK

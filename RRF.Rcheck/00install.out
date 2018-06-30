@@ -1,17 +1,21 @@
 * installing *source* package ‘RRF’ ...
 ** libs
-clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c classTree.c -o classTree.o
-clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c regTree.c -o regTree.o
-clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c regrf.c -o regrf.o
-clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c rf.c -o rf.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c RRF_init.c -o RRF_init.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c classTree.c -o classTree.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c regTree.c -o regTree.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c regrf.c -o regrf.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c rf.c -o rf.o
 rf.c:485:1: warning: expression result unused [-Wunused-value]
 +                                                               nrightimp[cl[n] - 1]++;
 ^                                                               ~~~~~~~~~~~~~~~~~~~~~~
 1 warning generated.
-gfortran-4.8   -fPIC  -g -O2  -c rfsub.f -o rfsub.o
-clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include -I/usr/local/include/freetype2 -I/opt/X11/include    -fPIC  -Wall -mtune=core2 -g -O2  -c rfutils.c -o rfutils.o
-clang -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o RRF.so classTree.o regTree.o regrf.o rf.o rfsub.o rfutils.o -L/usr/local/lib/gcc/x86_64-apple-darwin13.0.0/4.8.2 -lgfortran -lquadmath -lm -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
-installing to /Users/houtao/RRF/RRF.Rcheck/RRF/libs
+gfortran   -fPIC  -g -O2  -c rfsub.f -o rfsub.o
+gfortran: warning: couldn’t understand kern.osversion ‘17.6.0
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c rfutils.c -o rfutils.o
+clang -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o RRF.so RRF_init.o classTree.o regTree.o regrf.o rf.o rfsub.o rfutils.o -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin15/6.1.0 -L/usr/local/gfortran/lib -lgfortran -lquadmath -lm -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+ld: warning: directory not found for option '-L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin15/6.1.0'
+ld: warning: directory not found for option '-L/usr/local/gfortran/lib'
+installing to /Users/houtaodeng/mine/RRF/RRF.Rcheck/RRF/libs
 ** R
 ** data
 ** inst

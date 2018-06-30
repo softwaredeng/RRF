@@ -1,4 +1,4 @@
-useDynLib(RRF)
+useDynLib(RRF,.registration = TRUE)
 
 export(combine, getTree, grow, importance, margin, MDSplot, na.roughfix,
        partialPlot, RRF, rrfImpute, treesize, tuneRRF,
