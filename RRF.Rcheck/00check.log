@@ -4,7 +4,7 @@
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘RRF/DESCRIPTION’ ... OK
-* this is package ‘RRF’ version ‘1.8’
+* this is package ‘RRF’ version ‘1.9’
 * checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Houtao Deng <softwaredeng@gmail.com>’
 * checking package namespace information ... OK

@@ -1,7 +1,7 @@
 Package: RRF
 Title: Regularized Random Forest
-Version: 1.8
-Date: 2018-06-29
+Version: 1.9
+Date: 2018-07-16
 Depends: R (>= 2.5.0), stats
 Suggests: RColorBrewer, MASS
 Author: Fortran original by Leo Breiman and Adele Cutler, R port by
@@ -15,7 +15,7 @@ Maintainer: Houtao Deng <softwaredeng@gmail.com>
 License: GPL (>= 2)
 URL: https://sites.google.com/site/houtaodeng/rrf
 Repository: CRAN
-Date/Publication: 2018-06-29 12:08:05
-Packaged: 2018-06-30 06:09:23 UTC; houtaodeng
+Date/Publication: 2018-07-16 12:08:05
+Packaged: 2018-07-17 05:00:47 UTC; houtaodeng
 NeedsCompilation: yes
 RoxygenNote: 5.0.1
