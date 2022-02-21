@@ -47,7 +47,7 @@ c     main program.
      1     bestsplitnext(nrnodes), idmove(nsample),
      1     ncase(nsample), b(mdim,nsample),
      1     iv(mred), nodeclass(nrnodes), mind(mred),varUsedAll(mred)
-	 
+         
       double precision tclasspop(nclass), classpop(nclass, nrnodes),
      1     tclasscat(nclass, 32), win(nsample), wr(nclass),
      1     wl(nclass), tgini(mdim), xrand, coefReg(mred)
@@ -60,8 +60,8 @@ c     main program.
       call zermr(classpop,nclass,nrnodes)
 
 
-	  
-	  
+          
+          
       do j=1,nclass
          classpop(j, 1) = tclasspop(j)
       end do
@@ -96,13 +96,13 @@ c     If the node is terminal, move on.  Otherwise, split.
             goto 30
          else
             bestvar(kbuild) = msplit
-c         varDebug(11) = 1000			
-c         varDebug(12) = flagReg		
-c		mark the variable being splitted as 1; new		
-c1.5         if (flagReg .eq. 1) then	v1.5 so that varUsedAll can be used as indicating whether feature used
-            varUsedAll(msplit) = 1	
-c            varDebug(10) = msplit				
-c         endif			
+c         varDebug(11) = 1000                   
+c         varDebug(12) = flagReg                
+c               mark the variable being splitted as 1; new              
+c1.5         if (flagReg .eq. 1) then   v1.5 so that varUsedAll can be used as indicating whether feature used
+            varUsedAll(msplit) = 1      
+c            varDebug(10) = msplit                              
+c         endif                 
             iv(msplit) = 1
             if (decsplit .lt. 0.0) decsplit = 0.0
             tgini(msplit) = tgini(msplit) + decsplit
@@ -214,7 +214,7 @@ c     the coding into an integer of the categories going left.
      1     ncase(nsample), b(mdim,nsample), nn, j, tempFlagReg, debug
       double precision tclasspop(nclass), tclasscat(nclass,32), dn(32),
      1     win(nsample), wr(nclass), wl(nclass), xrand, coefReg(mred)
-      integer mind(mred), ncmax, ncsplit,nhit, ntie	
+      integer mind(mred), ncmax, ncsplit,nhit, ntie     
       integer flagReg,mtryCounter , varUsedAll(mred)
       double precision tempCoefReg 
       ncmax = 10
@@ -236,9 +236,9 @@ c     start main loop through variables to find best split
          mind(k) = k
       end do
       nn = mred
-      mtryCounter=0 		  
+      mtryCounter=0               
 c     sampling mtry variables w/o replacement.
-c	  do mt = 1, mtry  new use mred instead of mtry to include the variables new
+c         do mt = 1, mtry  new use mred instead of mtry to include the variables new
       do mt = 1, mred
          call rrand(xrand)
          j = int(nn * xrand) + 1
@@ -247,23 +247,23 @@ c	  do mt = 1, mtry  new use mred instead of mtry to include the variables new
          mind(nn) = mvar
          nn = nn - 1
          lcat = cat(mvar)
-c		if already use mtry random variables, then next; if not then plus1 new
+c               if already use mtry random variables, then next; if not then plus1 new
          if (flagReg.eq.1 .and.  varUsedAll(mvar).eq.0) then            ! v1.5 add flagReg as condition  
             if (varUsedAll(mvar).eq.0 .and. mtryCounter .ge. mtry) then ! if flagReg and varUsed equal to 1, then continue
               CYCLE                                                     
-            end if			
-            if (varUsedAll(mvar).eq.0 ) then 		 
+            end if                      
+            if (varUsedAll(mvar).eq.0 ) then             
                mtryCounter = mtryCounter + 1
             end if
         end if
-		 
+                 
          if (flagReg.ne.1 .and. mtryCounter .ge. mtry) then ! v1.5 if not flagReg, only split on mtry vars
             CYCLE
-         end if		 
+         end if          
          if (flagReg.ne.1) then 
             mtryCounter = mtryCounter + 1
          end if
-		 
+                 
          if (lcat .eq. 1) then
 c     Split on a numerical predictor.
             rrn = pno
@@ -289,19 +289,19 @@ c     Split on a numerical predictor.
 c     If neither nodes is empty, check the split.
                   if (dmin1(rrd, rld) .gt. 1.0e-5) then
                      crit = (rln / rld) + (rrn / rrd)
-c	  If regularization and not used, then regularize new		
-c						varDebug(3) = flagReg
-c						varDebug(4) = varUsedAll(mvar)
-c						varDebug(5) = mvar
-c						in the following flagReg=1, the do not limit on existing var
-c						if flagReg=0, then coefReg is for guided RF
-					 if(flagReg.eq.1 .and. varUsedAll(mvar).eq.0)then 
-						crit = coefReg(mvar)*crit
-						debug = 1
-					 end if
-					 if(flagReg.eq.0)then 
-						crit = coefReg(mvar)*crit
-					 end if					 
+c         If regularization and not used, then regularize new           
+c                                               varDebug(3) = flagReg
+c                                               varDebug(4) = varUsedAll(mvar)
+c                                               varDebug(5) = mvar
+c                                               in the following flagReg=1, the do not limit on existing var
+c                                               if flagReg=0, then coefReg is for guided RF
+                if(flagReg.eq.1 .and. varUsedAll(mvar).eq.0)then 
+                    crit = coefReg(mvar)*crit
+                    debug = 1
+                end if
+                if(flagReg.eq.0)then 
+                    crit = coefReg(mvar)*crit
+                end if
                      if (crit .gt. critmax) then
                         nbest = nsp
                         critmax = crit
@@ -337,19 +337,19 @@ c     Split on a categorical predictor.  Compute the decrease in impurity.
                dn(i) = su
                if(su .gt. 0) nnz = nnz + 1
             end do
-            nhit = 0			
-c	 	    If regularization and not used, then regularize new	
-			   tempFlagReg=0
-			   tempCoefReg=0
+            nhit = 0                    
+c                   If regularization and not used, then regularize new 
+                           tempFlagReg=0
+                           tempCoefReg=0
             if(flagReg.eq.1 .and. varUsedAll(mvar).eq.0) then 
-				  tempFlagReg = 1
-				  tempCoefReg = coefReg(mvar)
-            end if	
-c	 	    If flagReg=0, guided RF				
+                                  tempFlagReg = 1
+                                  tempCoefReg = coefReg(mvar)
+            end if      
+c                   If flagReg=0, guided RF                             
             if(flagReg.eq.0) then 
-				  tempFlagReg = 1
-				  tempCoefReg = coefReg(mvar)
-            end if			
+                                  tempFlagReg = 1
+                                  tempCoefReg = coefReg(mvar)
+            end if                      
             if (nnz .gt. 1) then
                if (nclass .eq. 2 .and. lcat .gt. ncmax) then
                   call catmaxb(pdo, tclasscat, tclasspop, nclass,
@@ -358,7 +358,7 @@ c	 	    If flagReg=0, guided RF
                else
                   call catmax(pdo, tclasscat, tclasspop, nclass, lcat,
      &                 nbest, critmax, nhit, maxcat, ncmax, ncsplit,
-     &                 tempCoefReg, tempFlagReg)	 
+     &                 tempCoefReg, tempFlagReg)         
                end if
                if (nhit .eq. 1) msplit = mvar
 c            else

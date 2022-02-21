@@ -1,7 +1,7 @@
 393a5ca445f6965873eca0259a17f833 *COPYING
-ed968c74bda049add295664c59b3e668 *DESCRIPTION
-f59e01cdccf6ae3a8df20374831f4406 *NAMESPACE
-98549f097f8d0348e3efb3a6607fd744 *NEWS
+d131a76c9bc0bc6cee77b9b52c30e263 *DESCRIPTION
+6affb6e619ece116473e8b0efc33dfbd *NAMESPACE
+6596dcd2b4ad42a0555ed8dcd2c50437 *NEWS
 324c18cc50ff5f27ca0cc44870b20457 *R/MDSplot.R
 dcd6c32cfa17356ca94555f340ac3050 *R/RRF.R
 cfabdada3468d8a8413aa86a9a669b04 *R/RRF.default.R
@@ -50,10 +50,11 @@ e3aa7f7ade7d2669f118499c6485c3e9 *man/predict.RRF.Rd
 dc47031f4a65781f0c0a933d10b13304 *man/tuneRRF.Rd
 e742c47b766879dcab4d620aab975ddd *man/varImpPlot.Rd
 3554a63c2bf98b8b2b1943a92eb59033 *man/varUsed.Rd
-0924e9e87f1cfafac5f9bf4662a06b73 *src/classTree.c
-b7d909c17b555eda1aed46b550db2124 *src/regTree.c
+a491c1dca67246040766f47ad7870723 *src/RRF_init.c
+cef97db0c811fc354938f05148fa69a5 *src/classTree.c
+60d6d5c5e30fce4b8355fe9348789bea *src/regTree.c
 79016a2b4870baffabfd04cbe19e3c47 *src/regrf.c
 1ca317317bff739f9462b34df7a7d091 *src/rf.c
 925f77861c2de4ab069837cca2609455 *src/rf.h
-10128d01958afe4cb4dc985f6c785660 *src/rfsub.f
-9550731e4f27944bec22c3b3c34e0704 *src/rfutils.c
+c7203c077a661ea74d2b9238d7bebde4 *src/rfsub.f
+59cc774ec29df4199e805d30bf31db6b *src/rfutils.c

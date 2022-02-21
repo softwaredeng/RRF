@@ -262,7 +262,7 @@ void unpack(int nBits, unsigned int pack, int *bits) {
     for (i = 0; i < nBits; pack >>= 1, ++i) bits[i] = pack & 1;
 }
 
-void F77_NAME(unpack)(int *nBits, unsigned int *pack, int *bits) {
+void F77_NAME(unpack)(int *nBits, /*unsigned*/ int *pack, int *bits) {
 	unpack(*nBits, *pack, bits);
 }
 

@@ -291,7 +291,7 @@ void findBestSplit(int *a, double *b, int *class, int mDim, int nSample,
 
 void F77_NAME(catmax)(double *parentDen, double *tclasscat,
                       double *tclasspop, int *nclass, int *lcat,
-                      unsigned int *ncatsp, double *critmax, int *nhit,
+                      /*unsigned*/ int *ncatsp, double *critmax, int *nhit,
                       int *maxcat, int *ncmax, int *ncsplit,double *coefReg, int *flagReg) {
 /* This finds the best split of a categorical variable with lcat
    categories and nclass classes, where tclasscat(j, k) is the number
@@ -354,7 +354,7 @@ void F77_NAME(catmax)(double *parentDen, double *tclasscat,
 
 /* Find best split of with categorical variable when there are two classes */
 void F77_NAME(catmaxb)(double *totalWt, double *tclasscat, double *classCount,
-                       int *nclass, int *nCat, unsigned int *nbest, double *critmax,
+                       int *nclass, int *nCat, /*unsigned*/ int *nbest, double *critmax,
                        int *nhit, double *catCount, double *coefReg, int *flagReg) {
 
     double catProportion[32], cp[32], cm[32];
