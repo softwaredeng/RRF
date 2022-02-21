@@ -10,13 +10,20 @@ rf.c:485:1: warning: expression result unused [-Wunused-value]
 +                                                               nrightimp[cl[n] - 1]++;
 ^                                                               ~~~~~~~~~~~~~~~~~~~~~~
 1 warning generated.
-gfortran -mmacosx-version-min=10.13 -fno-optimize-sibling-calls  -fPIC  -Wall -g -O2  -c rfsub.f -o rfsub.o
+/usr/local/opt/gcc/bin/gfortran -fno-optimize-sibling-calls  -fPIC  -Wall -g -O2  -c rfsub.f -o rfsub.o
 clang -mmacosx-version-min=10.13 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG   -I/usr/local/include   -fPIC  -Wall -g -O2  -c rfutils.c -o rfutils.o
-clang -mmacosx-version-min=10.13 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o RRF.so RRF_init.o classTree.o regTree.o regrf.o rf.o rfsub.o rfutils.o -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin18/8.2.0 -L/usr/local/gfortran/lib -lgfortran -lquadmath -lm -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin18/8.2.0'
-ld: warning: directory not found for option '-L/usr/local/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [RRF.so] Error 1
-ERROR: compilation failed for package ‘RRF’
-* removing ‘/Users/houtaodeng/RRF/RRF.Rcheck/RRF’
+clang -mmacosx-version-min=10.13 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o RRF.so RRF_init.o classTree.o regTree.o regrf.o rf.o rfsub.o rfutils.o -L/usr/local/opt/gcc/lib -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+ld: warning: object file (rfsub.o) was built for newer macOS version (11.4) than being linked (10.13)
+installing to /Users/houtaodeng/RRF/RRF.Rcheck/00LOCK-RRF/00new/RRF/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (RRF)

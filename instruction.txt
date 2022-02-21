@@ -1,10 +1,31 @@
-R CMD build --binary RRF  #build windows
+# R CMD build --binary RRF  #build windows
+
+# check package (both R-devel and R). https://win-builder.r-project.org/
+R CMD check RRF --as-cran
 
 R CMD build RRF  #this is the file for submiting to CRAN
+R CMD check --as-cran RRF_1.9.2.tar.gz  # this checks the build with cran criteria
 
-R CMD check --as-cran RRF_1.3.tar.gz  # this checks the build with cran criteria
+Tested here before submission
+https://win-builder.r-project.org/upload.aspx
 
 Cran submission website:
 https://cran.r-project.org/submit.html
 
 Email needs to be maintainer's and will receive confirmation after submission. 
+
+Problems & solutions
+* if directory not found for gfortran folders 
+** Create a file ~/.R/Makevars (if it does not exist yet)
+** Add the following to ~/.R/Makevars
+*** FC      = /usr/local/opt/gcc/bin/gfortran
+*** F77     = /usr/local/opt/gcc/bin/gfortran
+*** FLIBS   = -L/usr/local/opt/gcc/lib
+
+* Note: Maintainer: ‘ORPHANED’
+** Simply download the package sources, make changes if necessary (respecting original author and license!) and resubmit the package to CRAN with your name as maintainer in the DESCRIPTION file of the package.
+
+* Please also fix other issues that may be apparent in checks with a current R-devel.
+** Install the recent R-devel for MAC
+** R CMD check RRF --as-cran
+
