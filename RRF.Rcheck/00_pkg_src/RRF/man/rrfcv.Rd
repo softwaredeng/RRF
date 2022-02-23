@@ -54,7 +54,7 @@ pp. 334-343.
 ## The following can take a while to run, so if you really want to try
 ## it, copy and paste the code into R.
 
-\dontrun{
+\donttest{
 set.seed(647)
 myiris <- cbind(iris[1:4], matrix(runif(508 * nrow(iris)), nrow(iris), 508))
 result <- rrfcv(myiris, iris$Species)

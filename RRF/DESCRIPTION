@@ -1,7 +1,7 @@
 Package: RRF
 Title: Regularized Random Forest
 Version: 1.9.3
-Date: 2022-02-21
+Date: 2022-02-23
 Depends: R (>= 2.5.0), stats
 Suggests: RColorBrewer, MASS
 Authors@R: c(person("Houtao", "Deng", role = c("aut", "cre"),
@@ -10,18 +10,18 @@ Authors@R: c(person("Houtao", "Deng", role = c("aut", "cre"),
               person("Andy", "Liaw", role = "aut"),
               person("Leo", "Breiman", role = "aut"),
               person("Adele", "Cutler", role = "aut"))
-Author: Fortran original by Leo Breiman and Adele Cutler, R port by
-    Andy Liaw and Matthew Wiener, Regularized random forest for classification by
-    Houtao Deng. Regularized random forest for regression by Xin Guan. 
 Description: Feature Selection with Regularized Random Forest. This
     package is based on the 'randomForest' package by Andy Liaw.
     The key difference is the RRF() function that builds a
-    regularized random forest. 
+    regularized random forest. Fortran original by Leo Breiman 
+    and Adele Cutler, R port by Andy Liaw and Matthew Wiener, 
+    Regularized random forest for classification by Houtao Deng. 
+    Regularized random forest for regression by Xin Guan.
 Maintainer: Houtao Deng <softwaredeng@gmail.com>
 License: GPL (>= 2)
 URL: https://sites.google.com/site/houtaodeng/rrf
 Repository: CRAN
-Date/Publication: 2022-02-21 15:37:59
-Packaged: 2022-02-21 13:35:50 UTC; ripley
+Date/Publication: 2022-02-23 08:52:59
+Packaged: 2022-02-23 08:52:59 UTC; ripley
 NeedsCompilation: yes
 RoxygenNote: 5.0.1

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.11.25)  21 FEB 2022 10:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.11.25)  23 FEB 2022 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,7 +222,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box55
-) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.aux)
+) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.aux)
 \openout1 = `Rd2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -256,28 +256,28 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
- (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.out) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.out)
+ (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.out) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.out)
 \@outlinefile=\write4
 \openout4 = `Rd2.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 28.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 29.
  (/Users/houtaodeng/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 29.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 30.
  (/Users/houtaodeng/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 29.
+(Font)              scaled to size 10.0pt on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 31.
+(Font)              <7> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 31.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 37.
+(Font)              <5> on input line 32.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 43.
  (/Users/houtaodeng/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.toc [1
+) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.toc [1
 
 
 {/Users/houtaodeng/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
@@ -286,32 +286,32 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 
  (/Users/houtaodeng/Library/TinyTeX/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2021/06/21 v1.2n UTF-8 support
-)
+) [2]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 92.
- [2] [3] [4]
-LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 236.
+(Font)              scaled to size 9.0pt on input line 98.
+ [3] [4]
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 242.
  (/Users/houtaodeng/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 236.
+(Font)              scaled to size 10.0pt on input line 242.
  [5] [6]
-Overfull \hbox (15.76553pt too wide) in paragraph at lines 375--380
+Overfull \hbox (15.76553pt too wide) in paragraph at lines 381--386
 \T1/ptm/m/n/10 ized for all au-tos within a par-tic-u-lar size clas-si-fi-ca-tion (two-door small, sta-tion wag-ons, sports/speciality,
  []
 
 [7] [8] [9] [10] [11]
-Overfull \hbox (10.68808pt too wide) in paragraph at lines 721--724
+Overfull \hbox (10.68808pt too wide) in paragraph at lines 727--730
 []\T1/ptm/m/n/10 The []\T1/zi4/m/n/10 RRF []\T1/ptm/m/n/10 ob-ject must con-tain the []\T1/zi4/m/n/10 forest []\T1/ptm/m/n/10 com-po-nent; i.e., cre-ated with []\T1/zi4/m/n/10 RRF(..., keep.forest=TRUE)[]\T1/ptm/m/n/10 . 
  []
 
 [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-Overfull \hbox (10.68808pt too wide) in paragraph at lines 1388--1391
+Overfull \hbox (10.68808pt too wide) in paragraph at lines 1393--1396
 []\T1/ptm/m/n/10 The []\T1/zi4/m/n/10 RRF []\T1/ptm/m/n/10 ob-ject must con-tain the []\T1/zi4/m/n/10 forest []\T1/ptm/m/n/10 com-po-nent; i.e., cre-ated with []\T1/zi4/m/n/10 RRF(..., keep.forest=TRUE)[]\T1/ptm/m/n/10 . 
  []
 
-[23] [24] [25] (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.ind [26]
+[23] [24] [25] (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.ind [26]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 (Font)              using `T1/zi4/m/n' instead on input line 88.
@@ -320,7 +320,7 @@ LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
 (Font)              scaled to size 10.0pt on input line 92.
 [27
 
-]) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmp826ess/Rd2pdf1715675ea81b0/Rd2.aux)
+]) (/private/var/folders/vf/pn4s3pfs5j7897573m28sy9w0000gp/T/Rtmpfp15rq/Rd2pdf30b24fae6d2d/Rd2.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -329,12 +329,12 @@ Package rerunfilecheck Info: File `Rd2.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  9114 strings out of 480313
- 144943 string characters out of 5896366
- 436750 words of memory out of 5000000
+ 144930 string characters out of 5896366
+ 435750 words of memory out of 5000000
  26588 multiletter control sequences out of 15000+600000
  438282 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 77i,6n,79p,354b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,6n,79p,354b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Rfn.dotchart} has been referenced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Rfn.pairs} has been referenced but does not exist, replaced by a fixed one
@@ -342,7 +342,7 @@ pdfTeX warning (dest): name{Rfn.pairs} has been referenced but does not exist, r
 pdfTeX warning (dest): name{Rfn.cmdscale} has been referenced but does not exist, replaced by a fixed one
 
 {/Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/houtaodeng/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (27 pages, 204841 bytes).
+Output written on Rd2.pdf (27 pages, 205212 bytes).
 PDF statistics:
  682 PDF objects out of 1000 (max. 8388607)
  621 compressed objects within 7 object streams

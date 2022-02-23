@@ -107,7 +107,7 @@
     nclass <- object$forest$nclass
     nrnodes <- object$forest$nrnodes
     ## get rid of warning:
-    op <- options(warn=-1)
+    op <- options(warn=0)
     on.exit(options(op))
     x <- t(data.matrix(x))
 
