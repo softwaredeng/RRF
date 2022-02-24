@@ -15,14 +15,15 @@ Description: Feature Selection with Regularized Random Forest. This
     The key difference is the RRF() function that builds a
     regularized random forest. Fortran original by Leo Breiman 
     and Adele Cutler, R port by Andy Liaw and Matthew Wiener, 
-    Regularized random forest for classification by Houtao Deng. 
+    Regularized random forest for classification by Houtao Deng, 
     Regularized random forest for regression by Xin Guan.
+    Reference: Houtao Deng (2013) <arXiv:1306.0237>.
 Maintainer: Houtao Deng <softwaredeng@gmail.com>
 License: GPL (>= 2)
 URL: https://sites.google.com/site/houtaodeng/rrf
 Repository: CRAN
 Date/Publication: 2022-02-23 08:52:59
-Packaged: 2022-02-23 08:55:07 UTC; houtaodeng
+Packaged: 2022-02-24 04:04:21 UTC; houtaodeng
 NeedsCompilation: yes
 RoxygenNote: 5.0.1
 Author: Houtao Deng [aut, cre],
