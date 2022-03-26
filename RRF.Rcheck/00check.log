@@ -4,7 +4,7 @@
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘RRF/DESCRIPTION’ ... OK
-* this is package ‘RRF’ version ‘1.9.2’
+* this is package ‘RRF’ version ‘1.9.3’
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Houtao Deng <softwaredeng@gmail.com>’
 
@@ -66,6 +66,7 @@ CRAN repository db conflicts: ‘Maintainer’
 * checking compilation flags used ... OK
 * checking compiled code ... OK
 * checking examples ... OK
+* checking examples with --run-donttest ... OK
 * checking PDF version of manual ... OK
 * checking for non-standard things in the check directory ... OK
 * checking for detritus in the temp directory ... OK

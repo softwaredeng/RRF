@@ -33,7 +33,7 @@ Type 'q()' to quit R.
 > 
 > ### * </HEADER>
 > library('RRF')
-RRF 1.9.2
+RRF 1.9.3
 Type rrfNews() to see new features/changes/bug fixes.
 > 
 > base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
@@ -3836,18 +3836,18 @@ virginica       0          2        48        0.04
 > ## The following can take a while to run, so if you really want to try
 > ## it, copy and paste the code into R.
 > 
-> ## Not run: 
-> ##D set.seed(647)
-> ##D myiris <- cbind(iris[1:4], matrix(runif(508 * nrow(iris)), nrow(iris), 508))
-> ##D result <- rrfcv(myiris, iris$Species)
-> ##D with(result, plot(n.var, error.cv, log="x", type="o", lwd=2))
-> ##D 
-> ##D result <- replicate(5, rrfcv(myiris, iris$Species), simplify=FALSE)
-> ##D error.cv <- sapply(result, "[[", "error.cv")
-> ##D matplot(result[[1]]$n.var, cbind(rowMeans(error.cv), error.cv), type="l",
-> ##D         lwd=c(2, rep(1, ncol(error.cv))), col=1, lty=1, log="x",
-> ##D         xlab="Number of variables", ylab="CV Error")
-> ## End(Not run)
+> ## No test: 
+> set.seed(647)
+> myiris <- cbind(iris[1:4], matrix(runif(508 * nrow(iris)), nrow(iris), 508))
+> result <- rrfcv(myiris, iris$Species)
+> with(result, plot(n.var, error.cv, log="x", type="o", lwd=2))
+> 
+> result <- replicate(5, rrfcv(myiris, iris$Species), simplify=FALSE)
+> error.cv <- sapply(result, "[[", "error.cv")
+> matplot(result[[1]]$n.var, cbind(rowMeans(error.cv), error.cv), type="l",
++         lwd=c(2, rep(1, ncol(error.cv))), col=1, lty=1, log="x",
++         xlab="Number of variables", ylab="CV Error")
+> ## End(No test)
 > 
 > 
 > 
@@ -3957,7 +3957,7 @@ mtry = 6 	OOB error = 25.23%
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  1.894 0.248 2.636 0 0 
+Time elapsed:  63.389 0.936 66.323 0 0 
 > grDevices::dev.off()
 null device 
           1 
