@@ -76,7 +76,7 @@ boosting machine, \emph{Ann. of Stat.}}
 
 \seealso{\code{\link{RRF}}}
 
-\author{Andy Liaw \email{andy\_liaw@merck.com}}
+\author{Andy Liaw \email{andy_liaw@merck.com}}
 
 \examples{
 data(airquality)
