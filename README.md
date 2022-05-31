@@ -1,5 +1,4 @@
 # RRF
-regularized random forest
 
 Deng, Houtao. "Guided random forest in the RRF package." arXiv preprint arXiv:1306.0237 (2013).
 
